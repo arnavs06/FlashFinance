@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='flashcards.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">FlashFinance</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('landing') }}">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        
+        <div class="button-controls">
+            <button id="prev-btn" class="control-btn">Previous</button>
+            <button id="flip-btn" class="control-btn">Flip</button>
+            <button id="next-btn" class="control-btn">Next</button>
+        </div>
+
+        <p class="instructions">Click the card or press space to flip it. Use the left and right arrow keys to navigate.</p>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/flashcards.js') }}"></script>
+</body>
+</html>
