@@ -6,10 +6,9 @@ app = Flask(__name__)
 def landing():
     return render_template('landing.html')
 
-
 @app.route('/flashcards')
 def flashcards():
-    return render_template('flashcards.html') 
+    return render_template('flashcards.html')
 
 @app.route('/data/flashcards.json')
 def get_flashcards_data():
@@ -21,7 +20,8 @@ def test_css():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)  
+    app.run(debug=True)
+
 
 
 

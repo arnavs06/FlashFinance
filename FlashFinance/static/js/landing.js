@@ -1,3 +1,10 @@
+
+    // Event listener for the "Explore Our Flashcards" button
+    document.getElementById('flashcardsButton').addEventListener('click', function() {
+        window.location.href = '/flashcards';  // Redirect to flashcards route in Flask
+    });
+
+    // Header scroll behavior
     let lastScrollTop = 0;
     const header = document.querySelector('header');
 
@@ -20,4 +27,3 @@
             header.style.top = "0";  // If the cursor is near the top, show the header
         }
     });
-
