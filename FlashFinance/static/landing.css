@@ -190,6 +190,7 @@ nav ul li ul li a:hover {
   opacity: 0;
   animation: fadeInCard 1s forwards;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Same hover effect transition */
+  cursor:pointer;
 }
 
 .card h3 {
