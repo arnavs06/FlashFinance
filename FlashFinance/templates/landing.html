@@ -7,11 +7,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}">
 </head>
 <body>
+    <!-- Original Header -->
     <header>
         <div class="logo">FlashFinance</div>
         <nav>
             <ul>
-                <li><a href="{{ url_for('landing') }}">Home</a></li> 
+                <li><a href="{{ url_for('landing') }}">Home</a></li>
                 <li>
                     <a href="#">Categories</a>
                     <ul>
@@ -26,10 +27,33 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
     <div class="hero">
         <h1>Master Investment Banking</h1>
         <p>Your go-to resource for technical questions, valuation methods, and more!</p>
     </div>
+    
+    <!-- New Job Postings Section -->
+    <div class="new-job-postings">
+        <h2>New Job Postings</h2>
+        <div class="job-card-container">
+            <div class="job-card">
+                <h3>Investment Banking Analyst</h3>
+                <p>Join a leading firm for an exciting and challenging role.</p>
+            </div>
+            <div class="job-card">
+                <h3>Private Equity Associate</h3>
+                <p>Work alongside experienced professionals in the private equity sector.</p>
+            </div>
+            <div class="job-card">
+                <h3>M&A Advisory Intern</h3>
+                <p>Gain experience in M&A with a top advisory firm.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content Section -->
     <main class="content">
         <h2>Explore Our Flashcards</h2>
         <div class="card-container">
@@ -51,8 +75,12 @@
             </div>
         </div>
     </main>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 IB Flashcards. All rights reserved.</p>
     </footer>
+    <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+
 </body>
 </html>
