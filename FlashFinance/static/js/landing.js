@@ -1,4 +1,4 @@
-document.getElementById('flashcardsButton').addEventListener('click', function() {
+document.getElementById('card').addEventListener('click', function() {
     window.location.href = '/flashcards';  
 });
 
