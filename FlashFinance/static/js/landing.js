@@ -1,28 +1,25 @@
-// Event listener for the "Explore Our Flashcards" button
 document.getElementById('flashcardsButton').addEventListener('click', function() {
-    window.location.href = '/flashcards';  // Redirect to flashcards route in Flask
+    window.location.href = '/flashcards';  
 });
 
-// Header scroll behavior
+
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // If the user scrolls down, hide the header
     if (scrollTop > lastScrollTop) {
-        header.style.top = "-100px";  // Hide the header by moving it up
+        header.style.top = "-100px";  
     } else {
-        header.style.top = "0";  // Show the header by resetting its position
+        header.style.top = "0";  
     }
     
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 });
 
-// Show the header when the cursor is near the top of the screen
 window.addEventListener('mousemove', function(event) {
     if (event.clientY < 50) {
-        header.style.top = "0";  // If the cursor is near the top, show the header
+        header.style.top = "0";  
     }
 });
