@@ -1,7 +1,9 @@
-document.getElementById('card').addEventListener('click', function() {
-    window.location.href = '/flashcards';  
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        window.location.href = '/flashcards';
+    });
 });
-
 
 let lastScrollTop = 0;
 const header = document.querySelector('header');
