@@ -30,13 +30,13 @@ header nav {
 header nav ul {
   font-weight: bold;
   display: flex;
+  justify-content: flex-start;
   gap: 20px; 
 }
 
 header nav ul li {
   list-style-type: none;
 }
-
 .flashcard-container {
   display: flex;
   justify-content: center;
