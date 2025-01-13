@@ -139,11 +139,11 @@ nav ul li ul li a:hover {
 
 .flashcard .front {
   background-color: #ffffff;
-  color: #002f6c;
+  color: rgb(4, 59, 92);
 }
 
 .flashcard .back {
-  background-color: #002f6c;
+  background-color:rgb(4, 59, 92);
   color: white;
   transform: rotateX(180deg);
 }
@@ -164,7 +164,7 @@ nav ul li ul li a:hover {
 }
 
 .control-btn {
-  background-color: #002f6c;
+  background-color: rgb(4, 59, 92);
   color: white;
   border: none;
   padding: 10px 20px;
