@@ -11,6 +11,9 @@ body {
 header {
   background-color: #002f6c;
   color: white;
+  display: flex;
+  align-items: center; 
+  padding: 10px 20px; 
 }
 
 header .logo {
@@ -19,12 +22,19 @@ header .logo {
   display: flex;
   align-items: center;
 }
+
 header nav {
-  margin-left: auto;
+  margin-left: auto; 
 }
 
 header nav ul {
   font-weight: bold;
+  display: flex;
+  gap: 20px; 
+}
+
+header nav ul li {
+  list-style-type: none;
 }
 
 .flashcard-container {
