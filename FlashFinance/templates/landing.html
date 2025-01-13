@@ -53,25 +53,29 @@
     <main class="content">
         <h2 id="flashcardsButton">Prepare for Technical Questions</h2>
         <div class="card-container">
-            <button onclick="redirect()" class="card">
+            <div class="card">
                 <h3>Flashcards</h3>
-                <p>Learn all the vocabulary necessary for IB/PE through easy to digest flashcards</p>
-            </button>
-            <button class="card">
+                <p>Learn all the vocabulary necessary for IB/PE through easy-to-digest flashcards.</p>
+            </div>
+            <div class="card">
                 <h3>Interview Style Questions</h3>
                 <p>Learn about DCF, comps, and precedent transactions.</p>
-            </button>
-            <button class="card">
+            </div>
+            <div class="card">
                 <h3>M&A Strategies</h3>
                 <p>Dive into merger models and accretion/dilution analysis.</p>
-            </button>
-            <button class="card">
+            </div>
+            <div class="card">
                 <h3>Behavioral Questions</h3>
                 <p>Prepare for the fit interview with confidence.</p>
-            </button>
+            </div>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 IB Flashcards. All rights reserved.</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='landing.js') }}"></script>
+</body>
+</html>
