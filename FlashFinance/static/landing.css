@@ -92,8 +92,8 @@ nav ul li ul li a:hover {
 }
 
 .hero {
-  background-color: rgb(4, 59, 92);
-  color: rgb(255, 236, 197);
+  background-color: white;
+  color: rgb(4, 59, 92);
   text-align: center;
   padding: 5rem 1rem;
   animation: fadeIn 1s forwards;
@@ -112,7 +112,7 @@ nav ul li ul li a:hover {
 }
 
 .new-job-postings {
-  background-color: rgb(255, 236, 197);
+  background-color: white;
   padding: 3rem 1rem;
   text-align: center;
   margin-top: 4rem;
