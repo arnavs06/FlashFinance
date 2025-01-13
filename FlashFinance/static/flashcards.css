@@ -27,8 +27,8 @@ header {
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .logo img {
@@ -36,20 +36,15 @@ header .logo {
   height: auto;
 }
 
-nav {
-  margin-left: auto; /* Pushes navigation to the right */
-}
-
 nav ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 2rem;
-  justify-content: flex-end; /* Aligns items to the right */
 }
 
 nav ul li {
+  margin-left: 20px;
   position: relative;
 }
 
@@ -70,11 +65,10 @@ nav ul li ul {
   background-color: white;
   color: rgb(4, 59, 92);
   top: 2rem;
-  right: 0; /* Changed from left: 0 to right: 0 */
+  left: 0;
   border: 1px solid #ddd;
   border-radius: 4px;
   z-index: 1000;
-  min-width: 200px; /* Added minimum width for dropdown */
 }
 
 nav ul li:hover ul {
@@ -84,7 +78,6 @@ nav ul li:hover ul {
 nav ul li ul li {
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  text-align: right; /* Align dropdown text to the right */
 }
 
 nav ul li ul li a {
