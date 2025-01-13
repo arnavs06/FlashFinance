@@ -1,22 +1,6 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(4, 59, 92); /* Blue background */
-  color: rgb(255, 236, 197); /* Gold text */
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
-
-/* Gold rims for all major containers */
-* {
-  outline: 2px solid rgb(255, 236, 197); /* Gold rim */
-  outline-offset: -2px; /* Ensures rim stays tight to the element */
-}
-
 header {
-  background-color: rgb(4, 59, 92); /* Blue background */
-  color: rgb(255, 236, 197); /* Gold text */
+  background-color: white;
+  color: rgb(4, 59, 92);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -27,77 +11,6 @@ header {
   right: 0;
   z-index: 1000;
   transition: top 0.3s; 
+  border: 4px solid rgb(255, 236, 197); /* Gold trimming */
+  border-radius: 8px; /* Optional, for rounded edges */
 }
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav ul li a {
-  color: rgb(255, 236, 197); /* Gold text */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li ul {
-  background-color: rgb(255, 236, 197); /* Gold dropdown background */
-  color: rgb(4, 59, 92); /* Blue text */
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-nav ul li ul li a {
-  color: rgb(4, 59, 92); /* Blue text */
-}
-
-.hero {
-  background-color: rgb(4, 59, 92); /* Blue background */
-  color: rgb(255, 236, 197); /* Gold text */
-  text-align: center;
-  padding: 5rem 1rem;
-  animation: fadeIn 1s forwards;
-  position: relative;
-  z-index: 2;
-  margin-top: 100px; 
-}
-
-.hero h1, .hero p {
-  color: rgb(255, 236, 197); /* Gold text */
-}
-
-.new-job-postings {
-  background-color: rgb(4, 59, 92); /* Blue background */
-  color: rgb(255, 236, 197); /* Gold text */
-  padding: 3rem 1rem;
-  text-align: center;
-  margin-top: 4rem;
-}
-
-.job-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  color: rgb(4, 59, 92); /* Blue text */
-}
-
-.job-card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-}
-
-.content h2 {
-  color: rgb(255, 236, 197); /* Gold text */
-}
-
-.card {
-  border: 1px solid #ddd;
-  background-color: white;
-  color: rgb(4, 59, 92); /* Blue text */
-}
-
-footer {
-  background-color: rgb(4, 59, 92); /* Blue background */
-  color: rgb(255, 236, 197); /* Gold text */
-}
-
