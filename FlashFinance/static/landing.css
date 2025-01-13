@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'EB Garamond';
   margin: 0;
   padding: 0;
   color: rgb(4, 59, 92);
@@ -29,8 +29,8 @@ header {
   right: 0;
   z-index: 1000;
   transition: top 0.3s; 
-  border: 4px solid rgba(204, 162, 75); /* Gold trimming */
-  border-radius: 8px; /* Rounded edges for header */
+  border: 4px solid rgba(204, 162, 75); 
+  border-radius: 8px;
 }
 
 header .logo {
@@ -99,7 +99,7 @@ nav ul li ul li a:hover {
   animation: fadeIn 1s forwards;
   position: relative;
   z-index: 2;
-  margin-top: 100px; 
+  margin-top: 100px;
 }
 
 .hero h1 {
@@ -116,6 +116,8 @@ nav ul li ul li a:hover {
   padding: 3rem 1rem;
   text-align: center;
   margin-top: 4rem;
+  border: 4px solid rgba(204, 162, 75); 
+  border-radius: 8px;
 }
 
 .new-job-postings h2 {
@@ -221,6 +223,8 @@ footer {
   padding: 1rem;
   text-align: center;
   animation: fadeIn 1s forwards;
+  border: 4px solid rgba(204, 162, 75); 
+  border-radius: 8px;
 }
 
 .logo img {
