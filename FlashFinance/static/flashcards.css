@@ -29,11 +29,18 @@ header {
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  position: relative;
+  z-index: 1001; /* Ensure logo stays above other elements */
 }
 
 .logo img {
   max-width: 150px;
   height: auto;
+  display: block; /* Prevents any inline spacing issues */
+}
+
+nav {
+  margin-left: auto; /* This pushes the nav to the right */
 }
 
 nav ul {
@@ -41,6 +48,7 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
+  align-items: center; /* Vertically center nav items */
 }
 
 nav ul li {
@@ -53,6 +61,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 0;
+  display: block; /* Ensures the entire area is clickable */
 }
 
 nav ul li:hover > a {
@@ -88,7 +97,6 @@ nav ul li ul li a {
 nav ul li ul li a:hover {
   text-decoration: underline;
 }
-
 .flashcard-container {
   display: flex;
   justify-content: center;
