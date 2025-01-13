@@ -219,3 +219,7 @@ footer {
   text-align: center;
   animation: fadeIn 1s forwards;
 }
+.logo img {
+  max-width: 150px; 
+  height: auto; 
+}
