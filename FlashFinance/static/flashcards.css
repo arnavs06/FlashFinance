@@ -8,6 +8,7 @@ body {
   background-color: #f4f4f4;
   text-align: center;
 }
+
 header {
   background-color: rgb(4, 59, 92);
   color: white;
@@ -26,9 +27,18 @@ header {
 }
 
 header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: auto; /* Ensures the logo is aligned left */
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+nav {
+  margin-left: auto;
 }
 
 nav ul {
@@ -36,12 +46,10 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
-  margin-left: auto; /* Aligns the navigation items to the right */
+  gap: 2rem;
 }
 
-
 nav ul li {
-  margin-left: 20px;
   position: relative;
 }
 
@@ -86,13 +94,13 @@ nav ul li ul li a:hover {
   text-decoration: underline;
 }
 
-
 .flashcard-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  margin-top: 50px; 
+  margin-top: 120px;  /* Increased margin to account for fixed header */
+  padding: 2rem;
 }
 
 .flashcard {
@@ -142,10 +150,10 @@ nav ul li ul li a:hover {
 }
 
 .button-controls {
-  margin-top: 30px; 
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .control-btn {
@@ -169,8 +177,3 @@ nav ul li ul li a:hover {
   color: #666;
   font-size: 1rem;
 }
-.logo img {
-  max-width: 150px;
-  height: auto; 
-}
-
