@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: rgb(4, 59, 92);
+  color: #333;
   opacity: 0;
   animation: fadeIn 0.5s forwards;
 }
@@ -17,8 +17,8 @@ body {
 }
 
 header {
-  background-color: white;
-  color: rgb(4, 59, 92);
+  background-color: #002f6c;
+  color: white;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -63,7 +63,7 @@ nav ul li ul {
   display: none;
   position: absolute;
   background-color: white;
-  color: rgb(4, 59, 92);
+  color: #002f6c;
   top: 2rem;
   left: 0;
   border: 1px solid #ddd;
@@ -81,7 +81,7 @@ nav ul li ul li {
 }
 
 nav ul li ul li a {
-  color: rgb(4, 59, 92);
+  color: #002f6c;
   text-decoration: none;
 }
 
@@ -90,8 +90,8 @@ nav ul li ul li a:hover {
 }
 
 .hero {
-  background-color: rgb(4, 59, 92);
-  color: rgb(255, 236, 197);
+  background-color: #fff;
+  color: #002f6c;
   text-align: center;
   padding: 5rem 1rem;
   animation: fadeIn 1s forwards;
@@ -110,7 +110,7 @@ nav ul li ul li a:hover {
 }
 
 .new-job-postings {
-  background-color: rgb(255, 236, 197);
+  background-color: #f2f2f2;
   padding: 3rem 1rem;
   text-align: center;
   margin-top: 4rem;
@@ -118,7 +118,7 @@ nav ul li ul li a:hover {
 
 .new-job-postings h2 {
   font-size: 2rem;
-  color: rgb(4, 59, 92);
+  color: #002f6c;
 }
 
 .job-card-container {
@@ -130,7 +130,7 @@ nav ul li ul li a:hover {
 }
 
 .job-card {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 2rem;
@@ -142,7 +142,7 @@ nav ul li ul li a:hover {
 
 .job-card h3 {
   font-size: 1.5rem;
-  color: rgb(4, 59, 92);
+  color: #002f6c;
   margin-bottom: 1rem;
 }
 
@@ -163,7 +163,7 @@ nav ul li ul li a:hover {
 }
 
 .content h2 {
-  color: rgb(4, 59, 92);
+  color: #002f6c;
 }
 
 .content .card-container {
@@ -187,7 +187,7 @@ nav ul li ul li a:hover {
 }
 
 .card h3 {
-  color: rgb(4, 59, 92);
+  color: #002f6c;
   margin: 0;
   font-size: 1.2rem;
 }
@@ -213,7 +213,7 @@ nav ul li ul li a:hover {
 }
 
 footer {
-  background-color: rgb(4, 59, 92);
+  background-color: #002f6c;
   color: white;
   padding: 1rem;
   text-align: center;
