@@ -120,7 +120,8 @@ nav ul li ul li a:hover {
 
 .new-job-postings h2 {
   font-size: 2rem;
-  color: rgb(4, 59, 92);
+  color: white;
+  background-color: rgb(4, 59, 92);
 }
 
 .job-card-container {
