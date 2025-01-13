@@ -1,13 +1,14 @@
-function redirect(){
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-        card.addEventListener('click', function() {
-            window.location.href = '/flashcards';
-        });
+        if (card.querySelector('h3').textContent === 'Flashcards') {
+            card.addEventListener('click', function () {
+                window.location.href = '/flashcards';
+            });
+        }
     });
-    
-    
-}
+});
+
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 
