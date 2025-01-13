@@ -29,7 +29,6 @@ header {
 header .logo {
   display: flex;
   align-items: center;
-  margin-right: 2rem;
 }
 
 .logo img {
@@ -38,7 +37,7 @@ header .logo {
 }
 
 nav {
-  margin-left: auto;
+  margin-left: auto; /* Pushes navigation to the right */
 }
 
 nav ul {
@@ -47,6 +46,7 @@ nav ul {
   margin: 0;
   padding: 0;
   gap: 2rem;
+  justify-content: flex-end; /* Aligns items to the right */
 }
 
 nav ul li {
@@ -70,10 +70,11 @@ nav ul li ul {
   background-color: white;
   color: rgb(4, 59, 92);
   top: 2rem;
-  left: 0;
+  right: 0; /* Changed from left: 0 to right: 0 */
   border: 1px solid #ddd;
   border-radius: 4px;
   z-index: 1000;
+  min-width: 200px; /* Added minimum width for dropdown */
 }
 
 nav ul li:hover ul {
@@ -83,6 +84,7 @@ nav ul li:hover ul {
 nav ul li ul li {
   padding: 0.5rem 1rem;
   white-space: nowrap;
+  text-align: right; /* Align dropdown text to the right */
 }
 
 nav ul li ul li a {
@@ -99,7 +101,7 @@ nav ul li ul li a:hover {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  margin-top: 120px;  /* Increased margin to account for fixed header */
+  margin-top: 120px;
   padding: 2rem;
 }
 
