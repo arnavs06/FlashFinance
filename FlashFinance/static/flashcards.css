@@ -37,6 +37,7 @@ header nav ul {
 
 header nav ul li {
   list-style-type: none;
+  color: white;
 }
 
 .flashcard-container {
@@ -125,3 +126,4 @@ header nav ul li {
   max-width: 150px;
   height: auto; 
 }
+
