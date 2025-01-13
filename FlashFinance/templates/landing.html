@@ -51,9 +51,11 @@
     </div>
     
     <main class="content">
-        <h2 id="flashcardsButton" href="{{ url_for('flashcards') }}">Prepare for Technical Questions</h2>
+        <a id="flashcardsButton" href="{{ url_for('flashcards') }}" class="flashcards-link">
+            <h2>Prepare for Technical Questions</h2>
+        </a>
         <div class="card-container">
-            <div class="card">
+            <div class="card flashcards-card">
                 <h3>Flashcards</h3>
                 <p>Learn all the vocabulary necessary for IB/PE through easy-to-digest flashcards.</p>
             </div>
@@ -76,6 +78,6 @@
         <p>&copy; 2025 IB Flashcards. All rights reserved.</p>
     </footer>
 
-    <script src="{{ url_for('static', filename='landing.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
 </body>
 </html>
