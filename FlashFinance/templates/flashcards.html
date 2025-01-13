@@ -3,84 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashFinance</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}">
+    <title>Flashcards</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='flashcards.css') }}">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="{{ url_for('static', filename='images/FlashFinanceLogo.png') }}" alt="FlashFinance Logo">
-        </div>
+        <div class="logo"><img src="{{ url_for('static', filename='images/FlashFinanceLogo.png') }}" alt="FlashFinance Logo">
         <nav>
             <ul>
                 <li><a href="{{ url_for('landing') }}">Home</a></li>
-                <li>
-                    <a href="#">Categories</a>
-                    <ul>
-                        <li><a href="#">Accounting</a></li>
-                        <li><a href="#">Valuation</a></li>
-                        <li><a href="#">M&A</a></li>
-                        <li><a href="#">Behavioral</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Categories</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <div class="hero">
-        <h1>Master the Interview Process</h1>
-        <p>Your go-to resource for technical questions, valuation methods, and more!</p>
-    </div>
-    
-    <div class="new-job-postings">
-        <h2>New Job Postings</h2>
-        <div class="job-card-container">
-            <div class="job-card">
-                <h3>Investment Banking Analyst</h3>
-                <p>Join a leading firm for an exciting and challenging role.</p>
-            </div>
-            <div class="job-card">
-                <h3>Private Equity Associate</h3>
-                <p>Work alongside experienced professionals in the private equity sector.</p>
-            </div>
-            <div class="job-card">
-                <h3>Search Fund Fellows</h3>
-                <p>Develop technical skills and internship experience through our program.</p>
+    <main>
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="front"></div>
+                <div class="back"></div>
             </div>
         </div>
-    </div>
-
-    <main class="content">
-        <!-- Flashcards Button Section -->
-        <a id="flashcardsButton" href="{{ url_for('flashcards') }}" class="flashcards-link">
-            <h2>Prepare for Technical Questions</h2>
-        </a>
-        <div class="card-container">
-            <div class="card flashcards-card">
-                <h3>Flashcards</h3>
-                <p>Learn all the vocabulary necessary for IB/PE through easy-to-digest flashcards.</p>
-            </div>
-            <div class="card">
-                <h3>Interview Style Questions</h3>
-                <p>Learn about DCF, comps, and precedent transactions.</p>
-            </div>
-            <div class="card">
-                <h3>M&A Strategies</h3>
-                <p>Dive into merger models and accretion/dilution analysis.</p>
-            </div>
-            <div class="card">
-                <h3>Behavioral Questions</h3>
-                <p>Prepare for the fit interview with confidence.</p>
-            </div>
+        
+        <div class="button-controls">
+            <button id="prev-btn" class="control-btn">Previous</button>
+            <button id="flip-btn" class="control-btn">Flip</button>
+            <button id="next-btn" class="control-btn">Next</button>
         </div>
+
+        <p class="instructions">Click the card or press space to flip it. Use the left and right arrow keys to navigate.</p>
     </main>
 
-    <footer>
-        <p>&copy; 2025 IB Flashcards. All rights reserved.</p>
-    </footer>
-
-    <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/flashcards.js') }}"></script>
 </body>
 </html>
