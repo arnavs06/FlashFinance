@@ -24,21 +24,23 @@ header .logo {
 }
 
 header nav {
-  margin-left: auto; /* Align navigation to the right */
+  margin-left: auto; /* Pushes the navigation to the right */
+  display: flex; /* Ensures flexbox layout */
 }
 
 header nav ul {
   font-weight: bold;
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
-  gap: 20px; /* Space between navigation items */
-  color: white; /* Set text color to white */
+  justify-content: flex-end; /* Aligns the list items to the right */
+  gap: 20px; /* Space between items */
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
 }
 
 header nav ul li {
-  list-style-type: none;
-  color: white;
+  color: white; /* Ensures the text is white */
 }
+
 
 .flashcard-container {
   display: flex;
