@@ -24,19 +24,21 @@ header .logo {
 }
 
 header nav {
-  margin-left: auto; 
+  margin-left: auto; /* Align navigation to the right */
 }
 
 header nav ul {
   font-weight: bold;
   display: flex;
-  justify-content: flex-start;
-  gap: 20px; 
+  justify-content: flex-end; /* Align items to the right */
+  gap: 20px; /* Space between navigation items */
+  color: white; /* Set text color to white */
 }
 
 header nav ul li {
   list-style-type: none;
 }
+
 .flashcard-container {
   display: flex;
   justify-content: center;
