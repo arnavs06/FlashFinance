@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (card.querySelector('h3').textContent === 'Flashcards') {
             card.addEventListener('click', function () {
                 window.location.href = '/flashcards';
+                console.log('redirecting!!')
             });
         }
     });
