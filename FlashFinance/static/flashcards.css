@@ -1,50 +1,37 @@
 body {
-  font-family: 'EB Garamond';
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  color: rgb(4, 59, 92);
-  opacity: 0;
+  background-color: #f6f7fb;
+  color: #043b5c;
   animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 
 header {
-  background-color: rgb(4, 59, 92);
+  background-color: #043b5c;
   color: white;
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: 1000;
-  border: 4px solid rgba(204, 162, 75);
-  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  max-width: 150px;
-  height: auto;
-}
-
-nav {
-  display: flex;
-  align-items: center;
+header .logo img {
+  max-height: 40px;
 }
 
 nav ul {
@@ -56,48 +43,16 @@ nav ul {
 
 nav ul li {
   margin-left: 20px;
-  position: relative;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 0;
-  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-nav ul li:hover > a {
-  text-decoration: underline;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  background-color: white;
-  color: rgb(4, 59, 92);
-  top: 2rem;
-  right: 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  z-index: 1000;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul li ul li {
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-}
-
-nav ul li ul li a {
-  color: rgb(4, 59, 92);
-  text-decoration: none;
-}
-
-nav ul li ul li a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
@@ -105,18 +60,17 @@ nav ul li ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  margin-top: 120px;
-  padding: 2rem;
+  min-height: 80vh;
+  margin-top: 80px;
+  perspective: 1500px; /* Ensures proper 3D perspective */
 }
 
 .flashcard {
   width: 600px;
-  height: 350px;
-  perspective: 1000px;
-  cursor: pointer;
+  height: 400px;
   position: relative;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; /* Required for 3D transformations */
+  transition: transform 0.6s ease; /* Smooth flip animation */
 }
 
 .flashcard .front,
@@ -124,53 +78,56 @@ nav ul li ul li a:hover {
   width: 100%;
   height: 100%;
   position: absolute;
-  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden; /* Hides the back side when flipped */
+  transform-style: preserve-3d; /* Ensure proper 3D rendering */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Adjusted font size for larger card */
   font-weight: bold;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.6s ease;
+  background-clip: padding-box; /* Prevent border bleeding */
 }
 
 .flashcard .front {
   background-color: #ffffff;
-  color: rgb(4, 59, 92);
+  color: #043b5c;
+  transform: rotateX(0deg); /* Default position for the front */
 }
 
 .flashcard .back {
-  background-color:rgb(4, 59, 92);
+  background-color: #043b5c;
   color: white;
-  transform: rotateX(180deg);
+  transform: rotateX(180deg); /* Default hidden position for the back */
 }
 
-.flashcard.flipped .front {
-  transform: rotateX(180deg);
+.flashcard.flipped {
+  transform: rotateX(180deg); /* Flip the entire card */
 }
 
-.flashcard.flipped .back {
-  transform: rotateX(0deg);
+/* Ensure smooth hover transitions and interactive effects */
+.flashcard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .button-controls {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .control-btn {
-  background-color: rgb(4, 59, 92);
+  background-color: #043b5c;
   color: white;
-  border: none;
-  padding: 10px 20px;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -180,10 +137,8 @@ nav ul li ul li a:hover {
 }
 
 .instructions {
-  margin-top: 20px;
-  color: #666;
-  font-size: 1rem;
   text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
 }
-
-/* I hate front end.*/
