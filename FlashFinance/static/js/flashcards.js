@@ -7,17 +7,25 @@ const prevButton = document.getElementById('prev-btn');
 const nextButton = document.getElementById('next-btn');
 const flipButton = document.getElementById('flip-btn');
 
-const flashcards = [
-  { front: "What is DCF?", back: "Discounted Cash Flow" },
-  { front: "What is WACC?", back: "Weighted Average Cost of Capital" },
-  { front: "What is EBITDA?", back: "Earnings Before Interest, Taxes, Depreciation, and Amortization" },
-];
+let flashcards = [];
+
+fetch('/data/flashcards.json')
+  .then(response => response.json())
+  .then(data => {
+    flashcards = data;
+    updateFlashcard(currentIndex); 
+  })
+  .catch(error => {
+    console.error('Error loading flashcards:', error);
+  });
 
 function updateFlashcard(index) {
+  if (flashcards.length === 0) return;
+
   const flashcard = flashcards[index];
   frontElement.textContent = flashcard.front;
   backElement.textContent = flashcard.back;
-  isFlipped = false; 
+  isFlipped = false;
   flashcardElement.classList.remove('flipped');
 }
 
@@ -27,6 +35,8 @@ function flipCard() {
 }
 
 function navigateFlashcards(direction) {
+  if (flashcards.length === 0) return;
+
   if (direction === 'next' && currentIndex < flashcards.length - 1) {
     currentIndex++;
     updateFlashcard(currentIndex);
@@ -61,5 +71,3 @@ document.addEventListener('keydown', (e) => {
 prevButton.addEventListener('click', () => navigateFlashcards('prev'));
 nextButton.addEventListener('click', () => navigateFlashcards('next'));
 flipButton.addEventListener('click', flipCard);
-
-updateFlashcard(currentIndex);
