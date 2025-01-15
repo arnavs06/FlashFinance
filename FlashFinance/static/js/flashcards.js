@@ -30,10 +30,20 @@ function navigateFlashcards(direction) {
   if (direction === 'next' && currentIndex < flashcards.length - 1) {
     currentIndex++;
     updateFlashcard(currentIndex);
+    triggerCardSwitchAnimation();
   } else if (direction === 'prev' && currentIndex > 0) {
     currentIndex--;
     updateFlashcard(currentIndex);
+    triggerCardSwitchAnimation();
   }
+}
+
+function triggerCardSwitchAnimation() {
+  const currentCard = flashcardElement;
+  currentCard.classList.add('next-card');
+  setTimeout(() => {
+    currentCard.classList.remove('next-card');
+  }, 300);
 }
 
 flashcardElement.addEventListener('click', flipCard);
